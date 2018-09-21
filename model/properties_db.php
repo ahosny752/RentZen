@@ -23,4 +23,34 @@
     $statement->closeCursor();
     
 }
+
+
+
+function getAllProperties($city){
+    global $db;
+    $sql = "SELECT * FROM `property`";
+    $statement = $db->prepare($sql);
+    $statement->bindValue(':city',$city);
+    $statement->execute();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $statement->closeCursor();
+    //result is the array of results
+    return $result;    
+}
+
+
+
+function closeProperties($property_id){
+    global $db;
+    $sql = "DELTETE `requests` SET status = 'Resolved', "
+            . " `avtech_id` = :avtech_id WHERE request_id = :request_id";
+    $statement = $db->prepare($sql);
+    $statement->bindValue(':avtech_id',$avtech_id);
+    $statement->bindValue(':request_id',$request_id);
+    $result = $statement->execute();
+    $statement->closeCursor();
+    
+    //result is true on success, false on error
+    return $result;
+}
 ?>

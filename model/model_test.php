@@ -28,6 +28,11 @@ if ($result != false){
     echo "<p>Failure.  Request not added.</p>";    
 }
 
+$city = 'easton';
+$data = getAllProperties($city);
+print_r($data);
+
+
 
 
 ?>
