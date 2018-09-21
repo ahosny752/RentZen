@@ -39,6 +39,19 @@ function getAllProperties($city){
 }
 
 
+function getProperty($property_id){
+    global $db;
+    $sql = "SELECT * FROM `property` WHERE property_id = 1";
+    $statement = $db->prepare($sql);
+    $statement->bindValue(':property_id',$property_id);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    $statement->closeCursor();
+    //result is the array of results
+    return $result;    
+}
+
+
 
 function closeProperties($property_id){
     global $db;

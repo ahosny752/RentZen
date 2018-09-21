@@ -32,7 +32,7 @@ $city = 'easton';
 $data = getAllProperties($city);
 print_r($data);
 
-
-
-
+$property_id = 1;
+$data = getProperty($property_id);
+print_r($data);
 ?>
