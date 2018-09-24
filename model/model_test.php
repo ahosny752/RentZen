@@ -15,24 +15,37 @@ include 'database.php';
 include 'properties_db.php';
 echo '<p>Testing the properties functions ... </p>';
 
-$property_id = 8; // this id assigned to the user joe in the database
-$street = "2222 winter lane"; // free text
-$city = "easton"; // this is the problem type id for 'computer problem'
-$state_id = 9;
+//$property_id = 8; // this id assigned to the user joe in the database
+//$street = "2222 winter lane"; // free text
+//$city = "easton"; // this is the problem type id for 'computer problem'
+//$state_id = 9;
+//
+//$result = addProperty($property_id, $street, $city, $state_id);
+//
+//if ($result != false){
+//    echo "<p>Success.  Request added. $result</p>";
+//} else {
+//    echo "<p>Failure.  Request not added.</p>";    
+//}
 
-$result = addProperty($property_id, $street, $city, $state_id);
+//$city = 'philadelphia';
+//$data = getAllProperties($city);
+//print_r($data);
 
-if ($result != false){
-    echo "<p>Success.  Request added. $result</p>";
+//$property_id = 1;
+//$data = getProperty($property_id);
+//print_r($data);
+
+$property_id = 3;
+$data = closeProperties($property_id);
+print_r($data);
+
+if ($data != false){
+    echo "<p>Success.  property closed. $property_id</p>";
 } else {
-    echo "<p>Failure.  Request not added.</p>";    
+    echo "<p>Failure.  property not closed.</p>";    
 }
 
-$city = 'easton';
-$data = getAllProperties($city);
-print_r($data);
 
-$property_id = 1;
-$data = getProperty($property_id);
-print_r($data);
+
 ?>

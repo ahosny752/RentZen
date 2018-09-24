@@ -28,11 +28,11 @@
 
 function getAllProperties($city){
     global $db;
-    $sql = "SELECT * FROM `property`";
+    $sql = "SELECT * FROM `property` where city = ?";
     $statement = $db->prepare($sql);
-    $statement->bindValue(':city',$city);
+    $statement->bindValue(1,$city);
     $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $result = $statement->fetchAll();
     $statement->closeCursor();
     //result is the array of results
     return $result;    
@@ -41,11 +41,11 @@ function getAllProperties($city){
 
 function getProperty($property_id){
     global $db;
-    $sql = "SELECT * FROM `property` WHERE property_id = 1";
+    $sql = "SELECT * FROM `property` WHERE property_id = ?";
     $statement = $db->prepare($sql);
-    $statement->bindValue(':property_id',$property_id);
+    $statement->bindValue(1,$property_id);
     $statement->execute();
-    $result = $statement->fetchAll();
+    $result = $statement->fetch();
     $statement->closeCursor();
     //result is the array of results
     return $result;    
@@ -55,11 +55,9 @@ function getProperty($property_id){
 
 function closeProperties($property_id){
     global $db;
-    $sql = "DELTETE `requests` SET status = 'Resolved', "
-            . " `avtech_id` = :avtech_id WHERE request_id = :request_id";
+    $sql = "DELETE FROM `property` WHERE property_id = ?";
     $statement = $db->prepare($sql);
-    $statement->bindValue(':avtech_id',$avtech_id);
-    $statement->bindValue(':request_id',$request_id);
+    $statement->bindValue(1,$property_id);
     $result = $statement->execute();
     $statement->closeCursor();
     
