@@ -12,15 +12,17 @@
                 $state_id){
     global $db;
     $sql = "INSERT INTO `property`(`property_id`, `street`, `city`, `state_id`) VALUES "
-            . " (?, ?, ?, ?)";
+            . " (null, ?, ?, ?)";
     $statement = $db->prepare($sql);
-    $statement->bindValue(1,$property_id);
-    $statement->bindValue(2,$street);
-    $statement->bindValue(3,$city);
-    $statement->bindValue(4,$state_id);
+    //$statement->bindValue(1,$property_id);
+    $statement->bindValue(1,$street);
+    $statement->bindValue(2,$city);
+    $statement->bindValue(3,$state_id);
     $statement->execute();
     $last_id = $db->lastInsertId();
     $statement->closeCursor();
+    
+    return $last_id;
     
 }
 
