@@ -34,10 +34,10 @@ function getAllProperties($city){
     $statement = $db->prepare($sql);
     $statement->bindValue(1,$city);
     $statement->execute();
-    $result = $statement->fetchAll();
+    $properties = $statement->fetchAll();
     $statement->closeCursor();
     //result is the array of results
-    return $result;    
+    return $properties;    
 }
 
 
