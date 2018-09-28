@@ -5,16 +5,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-        
         
    function addProperty($property_id, $street, $city, 
-                $state_id){
+                $state_id,$zip, $beds, $baths, 
+                $sqft,$type_id, $propstat_id, $income_requirement, 
+                $credit_requirement,$rental_fee, $description, $picture){
     global $db;
-    $sql = "INSERT INTO `property`(`property_id`, `street`, `city`, `state_id`,`zip`, `beds`, `baths`, `sqft`, `type_id`, `propstat_id`,`income_requirement`, `credit_requirement`, `rental_fee`, `description`,`picture` VALUES "
-            . " (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, null)";
+    $sql = "INSERT INTO `property`(`property_id`, `street`, `city`, `state_id`,`zip`, `beds`, `baths`, `sqft`, `type_id`, `propstat_id`,`income_requirement`, `credit_requirement`, `rental_fee`, `description`,`picture`) VALUES "
+            . " (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $statement = $db->prepare($sql);
-    //$statement->bindValue(1,$property_id);
     $statement->bindValue(1,$street);
     $statement->bindValue(2,$city);
     $statement->bindValue(3,$state_id);
@@ -25,19 +24,28 @@
     $statement->bindValue(8,$type_id);
     $statement->bindValue(9,$propstat_id);
     $statement->bindValue(10,$income_requirement);
-    $statement->bindValue(11,$credit_report);
+    $statement->bindValue(11,$credit_requirement);
     $statement->bindValue(12,$rental_fee);
     $statement->bindValue(13,$description);
-    $statement->execute();
+    $statement->bindValue(14,$picture);
+    $success = $statement->execute();
     $last_id = $db->lastInsertId();
+   
+    $confirmation = '000000000' . $last_id;
+    $confirmation = substr($confirmation,-9);
+    $confirmation = 'T' . $confirmation;
+    
     $statement->closeCursor();
     
-    return $last_id;
-    
-}
-
-
-
+    //ok - what should i return??
+    if ($success == true){
+        $result = $confirmation;  //for example: T000000010
+    } else {
+        $result = false;
+        
+    }
+    return $result;
+  }
 function getAllProperties($city){
     global $db;
     $sql = "SELECT * FROM `property` where city = ?";

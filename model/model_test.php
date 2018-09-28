@@ -15,12 +15,26 @@ include 'database.php';
 include 'properties_db.php';
 echo '<p>Testing the properties functions ... </p>';
 
-$property_id = 8; // this id assigned to the user joe in the database
-$street = "666 winter lane"; // free text
-$city = "easton"; // this is the problem type id for 'computer problem'
-$state_id = 9;
-
-$result = addProperty($property_id, $street, $city, $state_id);
+$property_id = null;
+$street = '8998';
+$city = 'allentown';
+$state_id = 80;
+$zip = '19121' ;
+$beds = 5;
+$baths = 3;
+$sqft = 20;
+$type_id = 65;
+$propstat_id = 45;
+$income_requirement = 4.2;
+$credit_requirement = 560;
+$rental_fee = 99.99;
+$description = 'testing hey hey';
+$picture = null;
+    
+    $result = addProperty($property_id, $street, $city, 
+                $state_id,$zip, $beds, $baths, 
+                $sqft,$type_id, $propstat_id, $income_requirement, 
+                $credit_requirement,$rental_fee, $description, $picture);
 
 if ($result == false){
     echo "<p>Failure.  Request not added</p>";
