@@ -23,7 +23,7 @@ $rental_fee = filter_input(INPUT_POST,'rental_fee');
 $description = filter_input(INPUT_POST,'description');
 $picture = filter_input(INPUT_POST,'picture');
 
-echo "a<br>";
+echo "a<br>"; 
 
 if (isset($_POST['ADDPROPERTY'])){
  
