@@ -6,4 +6,6 @@
          
     </p>
    
-<?php include 'view/footer.php'?>
+<?php
+//hey man
+include 'view/footer.php'?>
