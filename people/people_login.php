@@ -1,6 +1,6 @@
 <?php include '../view/header.php';?>
 
-        <form action="index.php?role=<?php echo $role_id;?>" method="post">
+        <form action="index.php" method="post">
 
             <div id="data">
                 <label for="username">User name:</label>
@@ -15,7 +15,7 @@
             </div>
             
             <div id="message">
-                <?php echo $message;?>
+              
             </div> 
         </form>
         <p>&nbsp;</p>

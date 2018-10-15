@@ -64,9 +64,9 @@ if ($data != false){
 include 'people_db.php';
 echo '<p>Testting the people functions ... </p>';
 
-$username = 'ajones@email.com';
-$password = 'ajones123';
-$role_id = 102;
+$username = 'esmith@email.com';
+$password = 'esmith123';
+$role_id = 101;
 
 $result = loginPeople($username,$password,$role_id);
 
