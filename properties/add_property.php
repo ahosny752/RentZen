@@ -17,43 +17,43 @@
   <br>
   <br>
   <label for="zip">Zip</label>
-  <input type="text" name="street" id="zip" value="">
+  <input type="text" name="zip" id="zip" value="">
   <br>
   <br>
   <label for="beds">Beds</label>
-  <input type="text" name="street" id="beds" value="">
+  <input type="text" name="beds" id="beds" value="">
   <br>
   <br>
   <label for="baths">Baths</label>
-  <input type="text" name="street" id="baths" value="">
+  <input type="text" name="baths" id="baths" value="">
   <br>
   <br>
   <label for="sqft">Sqft</label>
-  <input type="text" name="street" id="sqft" value="">
+  <input type="text" name="sqft" id="sqft" value="">
   <br>
   <br>
   <label for="type_id">Type ID</label>
-  <input type="text" name="street" id="type_id" value="">
+  <input type="text" name="type_id" id="type_id" value="">
   <br>
   <br>
   <label for="propstat_id">Propstat ID</label>
-  <input type="text" name="street" id="propstat_id" value="">
+  <input type="text" name="propstat_id" id="propstat_id" value="">
   <br>
   <br>
   <label for="income_requirement">Income Requirement</label>
-  <input type="text" name="street" id="income_requirement" value="">
+  <input type="text" name="income_requirement" id="income_requirement" value="">
   <br>
   <br>
   <label for="credit_requirement">Credit Requirement</label>
-  <input type="text" name="street" id="credit_requirement" value="">
+  <input type="text" name="credit_requirement" id="credit_requirement" value="">
   <br>
   <br>
   <label for="rental_fee">Rental Fee</label>
-  <input type="text" name="street" id="rental_fee" value="">
+  <input type="text" name="rental_fee" id="rental_fee" value="">
   <br>
   <br>
   <label for="description">Description</label>
-  <textarea id="description" name="comment" height="5" width="30"></textarea>
+  <textarea id="description" name="description" height="5" width="30"></textarea>
   <br>
   <br>
      

@@ -61,5 +61,57 @@ if ($data != false){
 }
 
 
+include 'people_db.php';
+echo '<p>Testting the people functions ... </p>';
 
+$username = 'ajones@email.com';
+$password = 'ajones123';
+$role_id = 102;
+
+$result = loginPeople($username,$password,$role_id);
+
+if ($result == true){
+    echo "<p>Login for $username was good</p>";
+} else {
+    echo "<p>Login for $username was bad</p>";    
+}
+
+$testusername = 'Gertrude';
+$testpassword = 'betty123';
+$testusertype = 'tech';
+
+$result = loginPeople($testusername, $testpassword, $testusertype);
+
+if ($result == true){
+    echo "<p>Login for $testusername was good</p>";
+} else {
+    echo "<p>Login for $testusername was bad</p>";    
+}
+
+//// ***********************************************************
+//// the requests model
+include 'requests_db.php';
+echo '<p>Testing the request functions ... </p>';
+//
+////
+$role_id = 102;
+$data = getPeople($role_id);
+print_r($data);
+
+
+$people_id = 913;
+$role_id = 101;
+
+$data = getPeopleRole($role_id, $people_id);
+print_r($data);
+
+        if ($role_id == true){
+            echo 'renter';
+        } else {
+            
+            echo 'nope';
+            
+        }
+
+        
 ?>

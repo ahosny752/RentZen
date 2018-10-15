@@ -2,7 +2,7 @@
 <?php include 'view/header.php'?>
     <p>
       
-        <a href='properties/index.php'>Add Property</a>
+        <a href='properties/add_property.php'>Add Property</a>
          
     </p>
    
