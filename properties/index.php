@@ -23,7 +23,13 @@ $rental_fee = filter_input(INPUT_POST,'rental_fee');
 $description = filter_input(INPUT_POST,'description');
 $picture = filter_input(INPUT_POST,'picture');
 
-echo "a<br>"; 
+if (isset($_GET['search'])){
+    $result = getAllProperties($city);
+    include 'view_properties.php';
+    exit();    
+}
+
+
 
 if (isset($_POST['ADDPROPERTY'])){
  
