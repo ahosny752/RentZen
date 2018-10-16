@@ -29,8 +29,7 @@ if ($_SESSION['TYPE'] == 'renter'){
         <div class="row">
           <div class="col-lg-10 mx-auto">
               
-              <h1 class="text-uppercase"></h1>
-              <h1>All Of Your Housing Needs Made Easy</h1>
+              <h1 class="text-uppercase">All of your Hosing Needs Made easy</h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">

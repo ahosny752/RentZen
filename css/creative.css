@@ -78,6 +78,7 @@ section {
 img::-moz-selection {
   color: #fff;
   background: transparent;
+ 
 }
 
 img::selection {
