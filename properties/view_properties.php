@@ -1,4 +1,7 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
+    
+   
 <table border="1">
 
    <tr>
