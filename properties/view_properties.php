@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     
-   
+    <title>View Properties</title>
 <table border="1">
 
    <tr>
