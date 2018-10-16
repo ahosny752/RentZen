@@ -1,6 +1,7 @@
 <?php include '../view/header.php'?>
 <?php include '../view/navigation.php'?>
 
+
 <form action="index.php" method="post">
 
     <?php  $message = "";?>
