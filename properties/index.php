@@ -3,6 +3,8 @@ include '../common/configuration.php';
 include '../model/database.php';
 include '../model/properties_db.php';
 include '../common/functions.php';
+include '../model/users_db.php';
+
 
 
 // get default values
@@ -26,6 +28,11 @@ $picture = filter_input(INPUT_POST,'picture');
 if (isset($_GET['search'])){
     $result = getAllProperties($city);
     include 'view_properties.php';
+    exit();    
+}
+
+if (isset($_GET['prop_add'])){
+    include 'add_property.php';
     exit();    
 }
 
