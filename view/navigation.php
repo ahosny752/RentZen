@@ -10,11 +10,11 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#renters">Renters</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#properties">Properties</a>
+              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#landlords">Landlords</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#landlords">Landlords</a>
+              <a class="nav-link js-scroll-trigger" href="#properties">Properties</a>
             </li>
           </ul>
         </div>
