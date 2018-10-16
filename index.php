@@ -1,7 +1,7 @@
 <?php include 'common/configuration.php'?>
 <?php include 'view/header.php'?>
 <?php include 'view/navigation.php'?>
-<?php include 'model/users_db.php'?>
+<?php include '../model/users_db.php'?>
 
 <?php 
 

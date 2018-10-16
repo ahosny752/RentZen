@@ -1,5 +1,6 @@
 <?php include '../view/header.php'?>
 <?php include '../view/navigation.php'?>
+<?php include '../common/configuration.php'?>
 
     <p>Property Added successfully!</p>
     <p>Your property ID is: <?php echo $confirmation;?></p>
