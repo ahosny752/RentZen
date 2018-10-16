@@ -1,9 +1,12 @@
 <?php include '../view/header.php';?>
+<?php include '../common/configuration.php'?>
+<?php include '../view/navigation.php'?>
 
-        <form action="index.php" method="post">
+
+        <form action="index.php?role=<?php echo $role;?>" method="post">
 
             <div id="data">
-                <label for="username">User name:</label>
+                <label for="username">Username:</label>
                 <input type="text" name="username" id="username"><br>
                 <label for="username">Password:</label>
                 <input type="password" name="password" id="password">

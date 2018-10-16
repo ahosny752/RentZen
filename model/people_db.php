@@ -1,6 +1,6 @@
 <?php
 
-/*if there is not a person match, then return false.  Otherwise return the person_id. */
+
 
 function loginPeople($username,$password,$role_id){
     //returns true if the username and password are a good match.  false if not
@@ -39,13 +39,29 @@ function getPeople($role_id){
     return $result;
 }
 
-function getPeopleRole($role_id, $people_id ){
+
+function isAdmin($person_id){
+    
+    //i want this function to return Y or N or false (for error)
+    
+    global $db;
+    $statement = $db->prepare('select role_id from people where people_id = ?');
+    $statement->bindValue(1,$person_id);
+    $statement->execute();
+    $result = $statement->fetch();
+    $statement->closeCursor();
+    if (empty($result)){
+        $result = false;
+    } 
+    return $result['admin'];
+}
+
+function getPeopleRole($role ){
     //returns an array of people
     global $db;
-    $statement = $db->prepare('select role_id, people_id from people '
-            . 'where role_id = :role_id and people_id = :people_id');
-    $statement->bindValue(':role_id',$role_id);
-    $statement->bindValue(':people_id',$people_id);
+    $statement = $db->prepare('select role from people, people_role '
+            . 'where role = :role');
+    $statement->bindValue(':role',$role);
     $statement->execute();
     $result = $statement->fetchAll();
     $statement->closeCursor();
@@ -56,20 +72,5 @@ function getPeopleRole($role_id, $people_id ){
 }
 
 
-function isAdmin($person_id){
-    
-    //i want this function to return Y or N or false (for error)
-    
-    global $db;
-    $statement = $db->prepare('select admin from people where people_id = ?');
-    $statement->bindValue(1,$person_id);
-    $statement->execute();
-    $result = $statement->fetch();
-    $statement->closeCursor();
-    if (empty($result)){
-        $result = false;
-    } 
-    return $result['admin'];
-}
 
 ?>

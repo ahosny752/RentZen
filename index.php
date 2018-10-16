@@ -39,7 +39,7 @@
             <h2 class="section-heading text-white">We've got it all right here!</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">RentZen can accomodate you with the best homes, the best landlords, and the best experience, all at the tip of your finger. </p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="renter/renter_login.php">Log in</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/index.php">Log in</a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
               <h1>Looking to rent out a property?</h1>
             <h2 class="section-heading">We Are At Your Service</h2>
             <hr class="my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/people_login.php">Log in</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/index.php">Log in</a>
           </div>
         </div>
       </div>

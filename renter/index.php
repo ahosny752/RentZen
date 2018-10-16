@@ -1,13 +1,11 @@
 <?php 
 include '../common/configuration.php';
 include '../model/database.php';
-include '../model/request_db.php';
-include '../model/property_db.php';
+include '../model/properties_db.php';
 include '../common/functions.php';
 
 
-$requests = getrequest(); 
-$results = getproperty();
+
 
 if (isset($_GET['viewrequest'])){
     include 'view_requests.php';

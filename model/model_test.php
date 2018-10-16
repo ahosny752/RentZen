@@ -64,9 +64,34 @@ if ($data != false){
 include 'people_db.php';
 echo '<p>Testting the people functions ... </p>';
 
-$username = 'esmith@email.com';
-$password = 'esmith123';
+
+
 $role_id = 101;
+
+$result = getPeople($role_id);
+
+if ($result == true){
+    echo "<p>It  was good</p>";
+} else {
+    echo "<p>It was bad</p>";    
+}
+        
+
+       
+$role = 'renter';
+$result = getPeopleRole($role);
+
+
+if ($result == TRUE){
+    print_r($result);
+} else {
+    echo "<p>role was bad</p>";    
+}
+         
+
+$username = 'test@test.com';
+$password = 'test';
+$role_id = 102;
 
 $result = loginPeople($username,$password,$role_id);
 

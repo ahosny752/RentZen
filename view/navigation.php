@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="people/index.php?role_id">Log in</a>
+                <a class="nav-link js-scroll-trigger" href="people/index.php?role=">Log in</a>
             </li>
               <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="people/signup.php">Sign Up</a>
