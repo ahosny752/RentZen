@@ -2,16 +2,28 @@
 <?php include 'view/header.php'?>
 <?php include 'view/navigation.php'?>
 
+<?php 
+
+if (!isset($_SESSION)){
+    session_start();
+    if (!isset($_SESSION['TYPE'])){
+        $_SESSION['TYPE'] = 'visitor';
+    }
+}
+
+if ($_SESSION['TYPE'] == 'landlord'){
+    header('Location: users?landlord_main');
+    exit();
+} 
+if ($_SESSION['TYPE'] == 'renter'){
+    header('Location: users?renter_main');
+    exit();
+} else {
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-
-
-    
-    
-    
-    
-    
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
@@ -39,7 +51,7 @@
             <h2 class="section-heading text-white">We've got it all right here!</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">RentZen can accomodate you with the best homes, the best landlords, and the best experience, all at the tip of your finger. </p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/index.php">Log in</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="<?php echo $base_path;?>/users?signin">Sign In</a>
           </div>
         </div>
       </div>
@@ -53,7 +65,7 @@
               <h1>Looking to rent out a property?</h1>
             <h2 class="section-heading">We Are At Your Service</h2>
             <hr class="my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/index.php">Log in</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="<?php echo $base_path;?>/users?signin">Sign In</a>
           </div>
         </div>
       </div>
@@ -226,3 +238,4 @@
   </body>
 
 </html>
+<?php }; ?>
