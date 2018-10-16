@@ -53,7 +53,7 @@
               <h1>Looking to rent out a property?</h1>
             <h2 class="section-heading">We Are At Your Service</h2>
             <hr class="my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="landlord/landlord_login.php">Log in</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="people/people_login.php">Log in</a>
           </div>
         </div>
       </div>
