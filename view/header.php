@@ -75,9 +75,12 @@ if (!isset($_SESSION)){
     //learn from avclub's request_list
     if($_SESSION['TYPE'] == 'visitor') {
 ?>
+    
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
     <!-- Logo -->
-      <a class ="navbar-brand" aria-label="Home Page" href="<?php echo $base_path;?>/index.php">
+   
+    
+    <a class ="navbar-brand" aria-label="Home Page" href="<?php echo $base_path;?>/index.php">
           <img alt="RentZen Logo" src="<?php echo $base_path;?>/images/favicon.png" style="width:40px;">
       </a>
 
