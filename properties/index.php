@@ -25,6 +25,8 @@ $rental_fee = filter_input(INPUT_POST,'rental_fee');
 $description = filter_input(INPUT_POST,'description');
 $picture = filter_input(INPUT_POST,'picture');
 
+
+
 if (isset($_GET['search'])){
     $result = getAllProperties($city);
     include 'view_properties.php';
@@ -37,33 +39,41 @@ if (isset($_GET['prop_add'])){
 }
 
 
+if (isset($_GET['manage'])){
+    include 'add_property.php';
+    exit();    
+}
+
+
 
 if (isset($_POST['ADDPROPERTY'])){
- 
-        echo "b<br>";
-    echo $street;
-        echo "c<br>";
-    
-        $confirmation = addProperty($property_id, $street, $city, 
-                $state_id,$zip, $beds, $baths, 
-                $sqft,$type_id, $propstat_id, $income_requirement, 
-                $credit_requirement,$rental_fee, $description, $picture);
-        
+   if ((empty($street)  || empty($city)) || empty($state_id)) {
+       $message = "* One or more required fields are missing.";
+       include 'add_property.php';
+       exit();
+   } else
+   {
+       $confirmation = addProperty($property_id, $street, $city, $state_id, 
+               $zip, $beds, $baths, $sqft, $type_id, $propstat_id, 
+               $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
+   
+       if ($confirmation !== false)
+           {
+           include 'property_confirm.php';
+           exit();
+           } else {
+           $message = "An unexpected error occurred.";
+           }
 
-        echo "d<br>";
-            
-        
-        if ($confirmation !== false)
-            {
-            include 'property_confirm.php';
-            exit();
-            } else {
-            $message = "An unexpected error occurred.";
-            }
-        
-    }
+   }
+}
 
-//    PROBLEM WITH THIS. DOES NOT READ CONTROLLER
+
+
+
+
+
+
 
 
 

@@ -48,6 +48,7 @@
   <label for="credit_requirement">Credit Requirement</label>
   <input type="text" name="credit_requirement" id="credit_requirement" value="">
   <br>
+  <?php echo $message ?>
   <br>
   <label for="rental_fee">Rental Fee</label>
   <input type="text" name="rental_fee" id="rental_fee" value="">
@@ -72,8 +73,9 @@
      <br>
     </div>
         
-        
- <?php echo $message;?></p>
+    <div id="message">
+    <p class="error"><?php echo $message;?></p>
+    </div>
     </form>
 
 
