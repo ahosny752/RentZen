@@ -1,18 +1,13 @@
-<?php 
-include '../common/configuration.php';
-include '../model/database.php';
-include '../model/users_db.php';
-include '../model/properties_db.php';
-include '../model/rental_apps_db.php';
-include '../common/functions.php';
-?>
+<?php include '../view/header.php'?>
+<?php include '../view/navigation.php'?>
+
 
 
 
 <!DOCTYPE HTML>
 <html lang="en">
     
-    <title>View Properties</title>
+    <title>Manage Properties</title>
 <table border="1">
 
    <tr>
@@ -74,7 +69,7 @@ foreach($results as $result)
        <td>$rental_fee</td>
        <td>$description</td>
        <td><img src='../images/home1.jpg'> </td>
-       <td><a href='index.php?id=$property_id'>Close this</a></td>
+       <td><a href='index.php?id=$property_id'>edit this</a></td>
       </tr>";
 }
 ?>

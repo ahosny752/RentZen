@@ -1,3 +1,6 @@
+<?php include '../view/header.php'?>
+<?php include '../view/navigation.php'?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -5,8 +8,8 @@
 <table border="1">
 
   <tr>
-      <th scope="col">Application ID:</th>
-      <th scope="col">Property ID:</th>
+      <th scope="col">Rental Application  ID:</th>
+      <th scope="col">Renter Property ID:</th>
       <th scope="col">Last Status ID:</th>
       <th scope="col">First Name:</th>
       <th scope="col">Last Name:</th>

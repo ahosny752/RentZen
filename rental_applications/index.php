@@ -46,11 +46,17 @@ $renter_message = filter_input(INPUT_POST,'renter_message');
 //} 
 
 
-if (isset($_GET['id'])){
-    include 'rental_application.php';
+if (isset($_GET['pending'])){
+     $application = getAllApplications();
+    include 'view_applications.php';
     exit();
 }
 
+if (isset($_GET['view_apps'])){
+ $application = getAllApplications();
+    include 'view_applications.php';
+    exit();
+}
 if (isset($_POST['ADDAPPLICATION'])){
    if ((empty($first_name)  || empty($last_name)) || empty($phone)) {
        $message = "* One or more required fields are missing.";

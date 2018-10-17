@@ -21,8 +21,16 @@ $message = "";
 if (isset($_GET['logout'])){
     include 'users_logout.php';
     exit();
+    
 }
 
+
+
+if (isset($_GET['pending'])){
+     $application = getAllApplications();
+ header('Location:../rental_applications/view_applications.php');
+    exit();
+}
 
 if (isset($_POST['suLandlord'])){
     include 'users_signup_landlord.php';

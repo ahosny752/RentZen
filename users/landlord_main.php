@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active"><b>Properties</b></a>
-                    <a href="<?php echo $base_path;?>/rental_apps?pending" class="list-group-item list-group-item-action">Manage Rental Applications<i class="fas fa-angle-double-right pull-right"></i></a>
+                    <a href="<?php echo $base_path;?>/rental_applications/index.php?pending" class="list-group-item list-group-item-action">Manage Rental Applications<i class="fas fa-angle-double-right pull-right"></i></a>
                     <a href="<?php echo $base_path;?>/properties/index.php?prop_add" id="manage" name="manage" class="list-group-item list-group-item-action">Add a property<i class="fas fa-angle-double-right pull-right"></i></a>
                     <a href="<?php echo $base_path;?>/properties/index.php?manage" id="manage" name="manage" class="list-group-item list-group-item-action">Manage Properties<i class="fas fa-angle-double-right pull-right"></i></a>
                     <br>
