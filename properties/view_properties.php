@@ -65,8 +65,9 @@ foreach($results as $result)
        <td>$credit_requirement</td>
        <td>$rental_fee</td>
        <td>$description</td>
-       <td>$picture</td>    
+       <td><img src='../images/home1.jpg'> </td>    
       </tr>";
 }
 ?>
-</table>
+</table>'
+    '

@@ -66,7 +66,8 @@ if (!isset($_SESSION)){
     <!--<link rel="stylesheet" type="text/css" href="<?php echo $base_path;?>/main.css"/>-->
 
 <!-- Link to image for the favicon -->
-    <link rel="icon" href="<?php echo $base_path . '/images/favicon.png';?>"> 
+ 
+<link rel="icon" href="<?php echo $base_path . '/images/favicon.png';?>"> 
 </head>
 
 <body>
