@@ -1,6 +1,11 @@
-<?php include '../view/header.php'?>
-<?php include '../view/navigation.php'?>
-
+<?php 
+include '../common/configuration.php';
+include '../model/database.php';
+include '../model/users_db.php';
+include '../model/properties_db.php';
+include '../model/rental_apps_db.php';
+include '../common/functions.php';
+?>
 
 
 

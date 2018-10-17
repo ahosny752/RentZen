@@ -1,13 +1,31 @@
-<?php
+<?php 
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-if (isset($_GET['view_apps'])){
- header('Location:../rental_applications/view_applications.php');
-    exit();
+include '../common/configuration.php';
+include '../model/database.php';
+include '../model/users_db.php';
+include '../model/properties_db.php';
+include '../model/rental_apps_db.php';
+include '../common/functions.php';
+
+
+
+
+if (!isset($_SESSION)){
+    session_start();
+    if (!isset($_SESSION['TYPE'])){
+        $_SESSION['TYPE'] = 'visitor';
+    }
 }
+
+if ($_SESSION['TYPE'] == 'landlord'){
+    header('Location: users?landlord_main');
+    exit();
+} 
+if ($_SESSION['TYPE'] == 'renter'){
+    header('Location: users?renter_main');
+    exit();
+} 
+
 ?>
+
