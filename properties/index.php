@@ -28,7 +28,7 @@ $picture = filter_input(INPUT_POST,'picture');
 
 
 if (isset($_GET['search'])){
-    $result = getAllProperties($city);
+    $results = getAllProperties();
     include 'view_properties.php';
     exit();    
 }

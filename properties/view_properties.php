@@ -1,3 +1,9 @@
+<?php include '../view/header.php'?>
+<?php include '../view/navigation.php'?>
+
+
+
+
 <!DOCTYPE HTML>
 <html lang="en">
     
@@ -28,10 +34,10 @@
 <?php
 foreach($results as $result)
 {
-   $property_id = $result['PROPERTY_ID'];
+   $property_id = $result['property_id'];
    $street = $result['street'];
    $city = $result['city'];
-   $state_id = $result['state'];
+   $state_id = $result['state_id'];
    $zip = $result['zip'];
    $beds = $result['beds'];
    $baths = $result['baths'];
@@ -44,7 +50,23 @@ foreach($results as $result)
    $description = $result['description'];
    $picture = $result['picture'];
    
-   
+      echo "<tr>
+       <td>$property_id</td>
+       <td>$street</td>
+       <td>$city</td>
+       <td>$state_id</td>
+       <td>$zip</td>
+       <td>$beds</td>
+       <td>$baths</td>
+       <td>$sqft</td>
+       <td>$type_id</td>
+       <td>$propstat_id</td>
+       <td>$income_requirement</td>
+       <td>$credit_requirement</td>
+       <td>$rental_fee</td>
+       <td>$description</td>
+       <td>$picture</td>    
+      </tr>";
 }
 ?>
 </table>

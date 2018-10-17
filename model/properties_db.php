@@ -46,11 +46,10 @@
     }
     return $result;
   }
-function getAllProperties($city){
+function getAllProperties(){
     global $db;
-    $sql = "SELECT * FROM `property` where city = ?";
+    $sql = "SELECT * FROM `property`";
     $statement = $db->prepare($sql);
-    $statement->bindValue(1,$city);
     $statement->execute();
     $properties = $statement->fetchAll();
     $statement->closeCursor();
