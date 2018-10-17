@@ -13,34 +13,15 @@ include 'database.php';
 include 'rental_apps_db.php';
 echo '<p>Testing the application functions ... </p>';
 
-$message = "";
-$rental_application_id = null;
-$renterproperty_id = 12;
-$last_status_id = null;
-$first_name = 'AJ';
-$last_name= 'Hosny';
-$phone = 6109054171;
-$email = 'ajhosny@gmail.com';
-$income = 90000;
-$credit_score =800;
-$move_in_date = '06/34/20';
-$move_out_date = '09/23/43';
-$renter_message = 'test, please work';
 
 
-    
-    $result = addApplication($rental_application_id, $renterproperty_id, 
-            $last_status_id, $first_name, $last_name, $phone, $email,
-            $income, $credit_score, $move_in_date, $move_out_date, $renter_message);
+$result = acceptRentalApp(1, 3);
 
 if ($result == false){
-    echo "<p>Failure.  app not added</p>";
+    echo "<p>Failure.  rental NOT accpeted</p>";
 } else {
-    echo "<p>Success.  APP added: $result.</p>";    
+    echo "<p>Success.  rental accepted: $result.</p>";    
 }
-
-
-
 
 
 

@@ -40,8 +40,11 @@
  <br>
  <br>
  <label for="renter_message">Message:</label>
-
 <textarea id="renter_message" name="renter_message" height="5" width="30"></textarea>
+ <br>
+ <br>
+ <label for="status">Status:</label>
+ <input type="text" name="status" id="status" value="pending">
  <br>
  <br>
   <div id="buttons">

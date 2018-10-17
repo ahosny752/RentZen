@@ -2,10 +2,10 @@
 function addApplication($rental_application_id ,$renterproperty_id, $last_status_id, 
                 $first_name,$last_name, $phone, $email, 
                 $income, $credit_score, $move_in_date, $move_out_date, 
-                $renter_message){
+                $renter_message, $status){
     global $db;
-    $sql = "INSERT INTO `rental_application`(`rental_application_id`, `renterproperty_id`, `last_status_id`, `first_name`,`last_name`, `phone`, `email`, `income`, `credit_score`, `move_in_date`,`move_out_date`, `renter_message`) VALUES "
-            . " (null, null, null, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO `rental_application`(`rental_application_id`, `renterproperty_id`, `last_status_id`, `first_name`,`last_name`, `phone`, `email`, `income`, `credit_score`, `move_in_date`,`move_out_date`, `renter_message`, `status`) VALUES "
+            . " (null, null, null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $statement = $db->prepare($sql);
     $statement->bindValue(1,$first_name);
     $statement->bindValue(2,$last_name);
@@ -16,6 +16,7 @@ function addApplication($rental_application_id ,$renterproperty_id, $last_status
     $statement->bindValue(7,$move_in_date);
     $statement->bindValue(8,$move_out_date);
     $statement->bindValue(9,$renter_message);
+    $statement->bindValue(10,$status);
     $success = $statement->execute();
     $last_id = $db->lastInsertId();
    
@@ -60,5 +61,21 @@ function getApplication($rental_application_id){
     $statement->closeCursor();
     //result is the array of results
     return $application;    
+}
+
+
+
+function acceptRentalApp($rental_application_id,$renterproperty_id){
+    global $db;
+    $sql = "UPDATE `rental_application` SET status = 'Approved', "
+            . " `renterproperty_id` = :renterproperty_id WHERE rental_application_id = :rental_application_id";
+    $statement = $db->prepare($sql);
+    $statement->bindValue(':renterproperty_id',$renterproperty_id);
+    $statement->bindValue(':rental_application_id',$rental_application_id);
+    $result = $statement->execute();
+    $statement->closeCursor();
+    
+    //result is true on success, false on error
+    return $result;
 }
   ?> 

@@ -7,7 +7,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     
-    <title>Manage Properties</title>
+    <title>View Properties</title>
 <table border="1">
 
    <tr>
@@ -25,9 +25,9 @@
        <th scope="col">Credit Requirement:</th>
        <th scope="col">Rental Fee:</th>
        <th scope="col">Description:</th>
-       <th scope="col">Picture:</th>
-       <th scope="col">Edit</th> 
-   
+       <th scope="col">Picture:</th> 
+       <th scope="col">Edit:</th> 
+       
    </tr>
 
 
@@ -49,9 +49,9 @@ foreach($results as $result)
    $income_requirement = $result['income_requirement']; 
    $credit_requirement = $result['credit_requirement'];
    $rental_fee = $result['rental_fee'];
-   $description = $result['description'];
+   $description = nl2br(htmlspecialchars($result['description']));
    $picture = $result['picture'];
-  
+   
    
       echo "<tr>
        <td>$property_id</td>
@@ -68,8 +68,8 @@ foreach($results as $result)
        <td>$credit_requirement</td>
        <td>$rental_fee</td>
        <td>$description</td>
-       <td><img src='../images/home1.jpg'> </td>
-       <td><a href='index.php?id=$property_id'>edit this</a></td>
+       <td><img src=$picture style='width:100px; height:80px'> </td>
+       <td><a href='index.php?id=$property_id'>edit</a></td>
       </tr>";
 }
 ?>

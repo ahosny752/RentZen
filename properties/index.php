@@ -33,10 +33,18 @@ if (isset($_GET['search'])){
     exit();    
 }
 
+
+
 if (isset($_GET['prop_add'])){
     include 'add_property.php';
     exit();    
 }
+
+//if (isset($_GET['id'])){
+//    $results = getAllProperties();
+//    include 'property_manage.php';
+//    exit();    
+//}
 
 if (isset($_GET['manage'])){
     $results = getAllProperties();
@@ -44,13 +52,35 @@ if (isset($_GET['manage'])){
     exit();    
 }
 
-
-
-
 if (isset($_GET['id'])){
-      include 'edit_property.php';
+    include 'edit_property.php';
     exit();    
 }
+
+
+if (isset($_POST['UPDATEPROPERTY'])){
+   if ((empty($street)  || empty($city)) || empty($state_id)) {
+       $message = "* One or more required fields are missing.";
+       include 'edit_property.php';
+       exit();
+   } else
+   {
+       $success = editProperty($property_id, $street, $city, $state_id, $zip, $beds,
+               $baths, $sqft, $type_id, $propstat_id, $income_requirement, 
+               $credit_requirement, $rental_fee, $description, $picture);
+   
+       if ($success !== false)
+           {
+           include 'property_manage.php';
+           $results = getAllProperties();
+           exit();
+           } else {
+           $message = "An unexpected error occurred.";
+           }
+
+   }
+}
+
 
 
 if (isset($_POST['ADDPROPERTY'])){
@@ -74,37 +104,6 @@ if (isset($_POST['ADDPROPERTY'])){
 
    }
 }
-
-if (isset($_POST['EDITPROPERTY'])){
-   if ((empty($street)  || empty($city)) || empty($state_id)) {
-       $message = "* One or more required fields are missing.";
-       include 'add_property.php';
-       exit();
-   } else
-   {
-       $confirmation = addProperty($property_id, $street, $city, $state_id, 
-               $zip, $beds, $baths, $sqft, $type_id, $propstat_id, 
-               $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
-   
-       if ($confirmation !== false)
-           {
-           include 'property_confirm.php';
-           exit();
-           } else {
-           $message = "An unexpected error occurred.";
-           }
-
-   }
-}
-
-
-
-
-
-
-
-
-
 
 
 

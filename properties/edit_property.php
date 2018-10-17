@@ -66,7 +66,7 @@
     <br>  
         
     <div id="buttons">
-    <input type="submit" value="Update" name="EDITPROPERTY">
+    <input type="submit" value="Edit Property" name="UPDATEPROPERTY">
     <br>
     </div>
     
@@ -80,3 +80,4 @@
 
 
 <?php include '../view/footer.php'?>
+

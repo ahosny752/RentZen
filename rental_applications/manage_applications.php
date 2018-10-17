@@ -1,4 +1,4 @@
-<?php include '../view/header.php'?>
+<?php // include '../view/header.php'?>
 <?php include '../view/navigation.php'?>
 
 <!DOCTYPE HTML>
@@ -20,7 +20,8 @@
       <th scope="col">Move In Date:</th>
       <th scope="col">Move Out Date:</th>
       <th scope="col">Message:</th>
-      <th scope="col">Status:</th
+      <th scope="col">Status:</th>
+      <th scope="col">Action:</th>
   </tr>
 
 
@@ -60,6 +61,7 @@ foreach($application as $a)
       <td>$move_out_date</td>
       <td>$renter_message</td>
       <td>$status</td>
+      <td><a href='index.php?id=$rental_application_id'>Approve</a></td>
 
      </tr>";
 }

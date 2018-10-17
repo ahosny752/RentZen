@@ -73,5 +73,5 @@ foreach($results as $result)
       </tr>";
 }
 ?>
-</table>'
-    '
+</table>
+    
