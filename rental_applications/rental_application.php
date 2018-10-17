@@ -1,3 +1,5 @@
+<?php // include '../view/header.php'?>
+<?php include '../view/navigation.php'?>
 
 <!DOCTYPE HTML>
 <html lang="en">

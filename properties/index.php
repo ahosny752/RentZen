@@ -5,7 +5,7 @@ include '../model/properties_db.php';
 include '../common/functions.php';
 include '../model/users_db.php';
 
-
+session_start();
 
 // get default values
 $message = "";
@@ -45,6 +45,8 @@ if (isset($_GET['manage'])){
 }
 
 
+
+
 if (isset($_GET['id'])){
       include 'edit_property.php';
     exit();    
@@ -52,6 +54,28 @@ if (isset($_GET['id'])){
 
 
 if (isset($_POST['ADDPROPERTY'])){
+   if ((empty($street)  || empty($city)) || empty($state_id)) {
+       $message = "* One or more required fields are missing.";
+       include 'add_property.php';
+       exit();
+   } else
+   {
+       $confirmation = addProperty($property_id, $street, $city, $state_id, 
+               $zip, $beds, $baths, $sqft, $type_id, $propstat_id, 
+               $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
+   
+       if ($confirmation !== false)
+           {
+           include 'property_confirm.php';
+           exit();
+           } else {
+           $message = "An unexpected error occurred.";
+           }
+
+   }
+}
+
+if (isset($_POST['EDITPROPERTY'])){
    if ((empty($street)  || empty($city)) || empty($state_id)) {
        $message = "* One or more required fields are missing.";
        include 'add_property.php';

@@ -72,6 +72,7 @@ function getProperty($property_id){
 
 
 
+
 function closeProperties($property_id){
     global $db;
     $sql = "DELETE FROM `property` WHERE property_id = ?";
@@ -82,5 +83,34 @@ function closeProperties($property_id){
     
     //result is true on success, false on error
     return $result;
+}
+
+
+
+function editProperty($property_id, 
+        $street, $city, $state_id, $zip, $beds, 
+        $baths, $sqft, $type_id, $propstat_id, $income_requirement, $credit_requirement, $rental_fee, $description, $picture){
+
+    global $db;
+    $statement = $db->prepare('update property set '
+            . ' street = ?, city = ?, state_id = ?, zip = ?, beds = ?, baths = ?, sqft = ?, type_id = ?, propstat_id = ?, income_requirement = ?, rental_fee = ?, description = ?, picture = ? where property_id = ?');
+    $statement->bindValue(1,$street);
+    $statement->bindValue(2,$city);
+    $statement->bindValue(3,$state_id);
+    $statement->bindValue(4,$zip);
+    $statement->bindValue(5,$beds);
+    $statement->bindValue(6,$baths);
+    $statement->bindValue(7,$sqft);
+    $statement->bindValue(8,$type_id);
+    $statement->bindValue(9,$propstat_id);
+    $statement->bindValue(10,$income_requirement);
+    $statement->bindValue(11,$credit_requirement);
+    $statement->bindValue(12,$rental_fee);
+    $statement->bindValue(13,$description);
+    $statement->bindValue(14,$picture);
+    $success = $statement->execute();
+    $statement->closeCursor();
+    
+    return $success;    
 }
 ?>

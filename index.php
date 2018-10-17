@@ -25,6 +25,11 @@ if ($_SESSION['TYPE'] == 'renter'){
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+            <link rel="stylesheet" type="text/css" href="main.css"/>
+
+        
+    </head>
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
@@ -40,6 +45,7 @@ if ($_SESSION['TYPE'] == 'renter'){
         </div>
       </div>
     </header>
+    
   <body id="page-top">
 
   

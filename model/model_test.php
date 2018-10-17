@@ -74,8 +74,36 @@ if ($data == false){
 include 'properties_db.php';
 echo '<p>Testing the properties functions ... </p>';
 
-$property_id = null;
-$street = '8998';
+//$property_id = null;
+//$street = '8998';
+//$city = 'allentown';
+//$state_id = 80;
+//$zip = '19121' ;
+//$beds = 5;
+//$baths = 3;
+//$sqft = 20;
+//$type_id = 65;
+//$propstat_id = 45;
+//$income_requirement = 4.2;
+//$credit_requirement = 560;
+//$rental_fee = 99.99;
+//$description = 'testing hey hey';
+//$picture = null;
+//    
+//    $result = addProperty($property_id, $street, $city, 
+//                $state_id,$zip, $beds, $baths, 
+//                $sqft,$type_id, $propstat_id, $income_requirement, 
+//                $credit_requirement,$rental_fee, $description, $picture);
+//
+//if ($result == false){
+//    echo "<p>Failure.  Request not added</p>";
+//} else {
+//    echo "<p>Success.  Request added: $result.</p>";    
+//}
+
+
+$property_id = 302;
+$street = '89984';
 $city = 'allentown';
 $state_id = 80;
 $zip = '19121' ;
@@ -90,16 +118,31 @@ $rental_fee = 99.99;
 $description = 'testing hey hey';
 $picture = null;
     
-    $result = addProperty($property_id, $street, $city, 
-                $state_id,$zip, $beds, $baths, 
-                $sqft,$type_id, $propstat_id, $income_requirement, 
-                $credit_requirement,$rental_fee, $description, $picture);
-
+    $result = editProperty($property_id, $street, $city, $state_id, $zip, $beds, 
+            $baths, $sqft, $type_id, $propstat_id, $income_requirement,
+            $credit_requirement, $rental_fee, $description, $picture);
+            
 if ($result == false){
-    echo "<p>Failure.  Request not added</p>";
+    echo "<p>Failure.  property not updated</p>";
 } else {
-    echo "<p>Success.  Request added: $result.</p>";    
+    echo "<p>Success.  property updated: $result.</p>";    
 }
+
+
+
+
+$success = editProperty(301, '544', 'pa', '43', 'asdf',
+        '$beds', '$baths', '$sqft', 44, 44, 555, 
+        555, 44, 'test', 'images');
+        
+        
+if ($success == true){
+    echo "Edit property  was OK<br>";
+}
+echo "get problem types<br><br>";
+
+print_r(getAllProperties());
+
 
 $city = 'philadelphia';
 $data = getAllProperties($city);
@@ -172,31 +215,5 @@ if ($result == true){
     echo "<p>Login for $testusername was bad</p>";    
 }
 
-//// ***********************************************************
-//// the requests model
-include 'requests_db.php';
-echo '<p>Testing the request functions ... </p>';
-//
-////
-$role_id = 102;
-$data = getPeople($role_id);
-print_r($data);
-
-
-$people_id = 913;
-$role_id = 101;
-
-$data = getPeopleRole($role_id, $people_id);
-print_r($data);
-
-        if ($role_id == true){
-            echo 'renter';
-        } else {
-            
-            echo 'nope';
-            
-        }
-
-        
         
 ?>

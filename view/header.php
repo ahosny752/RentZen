@@ -1,6 +1,5 @@
 <?php
 
-
 if (!isset($_SESSION)){
     session_start();
     if (!isset($_SESSION['TYPE'])){
@@ -51,6 +50,8 @@ if (!isset($_SESSION)){
 
    <!-- Custom styles for this template -->
    <link href="css/creative.min.css" rel="stylesheet">
+      <link href="main.css" rel="stylesheet">
+
 
 <!-- Put in viewport + Bootstrap 4 + jQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -81,7 +82,7 @@ if (!isset($_SESSION)){
    
     
     <a class ="navbar-brand" aria-label="Home Page" href="<?php echo $base_path;?>/index.php">
-          <img alt="RentZen Logo" src="<?php echo $base_path;?>/images/favicon.png" style="width:40px;">
+          <img alt="RentZen Logo" src="<?php echo $base_path;?>/images/favicon.png" style="width:80px;">
       </a>
 
     <!-- Toggler Icon for responsiveness -->

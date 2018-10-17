@@ -7,7 +7,7 @@ include '../model/users_db.php';
 include '../model/properties_db.php';
 include '../model/rental_apps_db.php';
 include '../common/functions.php';
-
+session_start();
 
 $message = "";
 $rental_application_id = filter_input(INPUT_POST,'rental_application_id');

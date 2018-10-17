@@ -66,7 +66,7 @@
     <br>  
         
     <div id="buttons">
-    <input type="submit" value="Edit Property" name="EDITPROPERTY">
+    <input type="submit" value="Update" name="EDITPROPERTY">
     <br>
     </div>
     
