@@ -9,6 +9,65 @@ include '../common/configuration.php';
 include 'database.php';
 
 
+
+include 'rental_apps_db.php';
+echo '<p>Testing the application functions ... </p>';
+
+$message = "";
+$rental_application_id = null;
+$renterproperty_id = 12;
+$last_status_id = null;
+$first_name = 'AJ';
+$last_name= 'Hosny';
+$phone = 6109054171;
+$email = 'ajhosny@gmail.com';
+$income = 90000;
+$credit_score =800;
+$move_in_date = '06/34/20';
+$move_out_date = '09/23/43';
+$renter_message = 'test, please work';
+
+
+    
+    $result = addApplication($rental_application_id, $renterproperty_id, 
+            $last_status_id, $first_name, $last_name, $phone, $email,
+            $income, $credit_score, $move_in_date, $move_out_date, $renter_message);
+
+if ($result == false){
+    echo "<p>Failure.  app not added</p>";
+} else {
+    echo "<p>Success.  APP added: $result.</p>";    
+}
+
+
+
+
+
+
+
+$data = getAllApplications();
+print_r($data);
+
+if ($data == false){
+    echo "<p>Failure. cant get</p>";
+} else {
+    echo "<p>Success we got it all: $result.</p>";   
+    
+}
+
+
+
+$rental_application_id = 28;
+$data = getApplication($rental_application_id);
+print_r($data);
+
+if ($data == false){
+    echo "<p>Failure. cant get</p>";
+} else {
+    echo "<p>Success we got it AJ: $result.</p>";    
+}
+
+
 // ***********************************************************
 //TEST WILL SAY IT DOESNT WORK BUT THE DATABASE IS GETTING THE DATA INSERTED
 // the properties model
@@ -138,5 +197,6 @@ print_r($data);
             
         }
 
+        
         
 ?>
