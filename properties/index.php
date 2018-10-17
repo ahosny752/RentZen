@@ -45,7 +45,8 @@ if (isset($_GET['manage'])){
 }
 
 if (isset($_GET['view_apps'])){
-    include 'rental_application.php';
+    header('Location:../rental_apps/rental_applications.php');
+    
     exit();    
 }
 
