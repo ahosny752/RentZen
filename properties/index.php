@@ -38,14 +38,14 @@ if (isset($_GET['prop_add'])){
     exit();    
 }
 
-
 if (isset($_GET['manage'])){
+    $results = getAllProperties();
     include 'property_manage.php';
     exit();    
 }
 
 if (isset($_GET['id'])){
-    header('Location:../rental_applications/rental_applications.php');
+    header('Location:../rental_applications/rental_application.php');
     exit();    
 }
 

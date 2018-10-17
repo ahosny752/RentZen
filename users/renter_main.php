@@ -21,7 +21,7 @@
                 <div class="list-group">
                     <a href="" class="list-group-item list-group-item-action active"><b>Properties</b></a>
                     <a href="<?php echo $base_path;?>/properties?search" class="list-group-item list-group-item-action">Search for Properties<i class="fas fa-angle-double-right pull-right"></i></a>
-                    <a href="<?php echo $base_path;?>/rental_apps?view_apps" class="list-group-item list-group-item-action">My Rental Applications<i class="fas fa-angle-double-right pull-right"></i></a>
+                    <a href="<?php echo $base_path;?>/rental_applications?view_apps" class="list-group-item list-group-item-action">My Rental Applications<i class="fas fa-angle-double-right pull-right"></i></a>
                     <br>
                     <a href="" class="list-group-item list-group-item-action active"> <b>Account</b></a>
                     <a href="<?php echo $base_path;?>/users?renter_profile" class="list-group-item list-group-item-action">Update Profile<i class="fas fa-angle-double-right pull-right"></i></a>
