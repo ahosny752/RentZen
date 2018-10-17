@@ -35,7 +35,7 @@ if ($_SESSION['TYPE'] == 'renter'){
         <div class="row">
           <div class="col-lg-10 mx-auto">
               
-              <h1 class="text-uppercase">All of your Hosing Needs Made easy</h1>
+              <h1 class="text-uppercase">All of your Renting Needs Made Easy</h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
@@ -53,7 +53,7 @@ if ($_SESSION['TYPE'] == 'renter'){
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-              <h1>Looking to Rent?</h1>
+              <h1>Looking for your dream home?</h1>
             <h2 class="section-heading text-white">We've got it all right here!</h2>
             <hr class="light my-4">
             <p class="text-faded mb-4">RentZen can accomodate you with the best homes, the best landlords, and the best experience, all at the tip of your finger. </p>
@@ -68,10 +68,10 @@ if ($_SESSION['TYPE'] == 'renter'){
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-              <h1>Looking to rent out a property?</h1>
-            <h2 class="section-heading">We Are At Your Service</h2>
+              <h1>New to RentZen?</h1>
+            <h2 class="section-heading">Create an account below!</h2>
             <hr class="my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="<?php echo $base_path;?>/users?signin">Sign In</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="<?php echo $base_path;?>/users?signup">Sign Up</a>
           </div>
         </div>
       </div>
