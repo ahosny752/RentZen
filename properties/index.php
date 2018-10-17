@@ -40,7 +40,7 @@ if (isset($_GET['prop_add'])){
 
 
 if (isset($_GET['manage'])){
-    include 'view_properties.php';
+    include 'property_manage.php';
     exit();    
 }
 
