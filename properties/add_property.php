@@ -7,6 +7,7 @@
 <form action="index.php" method="post">
 
     <?php  $message = "";?>
+    <fieldset>
     <div class="form-group" align="left">
   <label for="street">Street</label>
   <input type="text" name="street" id="street" value="">
@@ -72,7 +73,7 @@
     <input type="submit" value="Add Property" name="ADDPROPERTY">
     <br>
     </div>
-    
+    <fieldset>
      <br>
     </div>
         

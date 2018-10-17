@@ -53,7 +53,8 @@ if (isset($_GET['manage'])){
 }
 
 if (isset($_GET['id'])){
-    include 'edit_property.php';
+   header('Location:../rental_applications/rental_application.php');
+
     exit();    
 }
 
