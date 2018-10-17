@@ -27,6 +27,7 @@
        <th scope="col">Description:</th>
        <th scope="col">Picture:</th> 
        <th scope="col">Edit:</th> 
+       <th scope="col">Remove:</th> 
        
    </tr>
 
@@ -70,6 +71,7 @@ foreach($results as $result)
        <td>$description</td>
        <td><img src=$picture style='width:100px; height:80px'> </td>
        <td><a href='index.php?id=$property_id'>edit</a></td>
+       <td><a href='index.php?id=$property_id'>remove</a></td>    
       </tr>";
 }
 ?>

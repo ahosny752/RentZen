@@ -20,3 +20,20 @@ and open the template in the editor.
 .bg-primary {
     background-color: #7d161a;
 }
+
+label{
+display:inline-block;
+width:200px;
+margin-right:30px;
+text-align:right;
+}
+
+input{
+
+}
+
+fieldset{
+border:none;
+width:500px;
+margin:0px auto;
+}

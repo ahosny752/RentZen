@@ -1,10 +1,13 @@
 <?php include '../view/header.php'?>
 <?php include '../view/navigation.php'?>
 
-
+<div class="row justify-content-md-center"> <!--Variable width content BS4-->
+    <div class="col-md-2"></div>
+    <div class="col-md-auto">
 <form action="index.php" method="post">
 
     <?php  $message = "";?>
+    <div class="form-group" align="left">
   <label for="street">Street</label>
   <input type="text" name="street" id="street" value="">
   <br>
@@ -77,6 +80,7 @@
     <p class="error"><?php echo $message;?></p>
     </div>
     </form>
-
+    </div>
+    </div>
 
 <?php include '../view/footer.php'?>

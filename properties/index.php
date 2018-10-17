@@ -79,6 +79,14 @@ if (isset($_POST['UPDATEPROPERTY'])){
            }
 
    }
+   
+   $close_this_property_id = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+if (($_SESSION['TYPE'] == 'landlord') && (!empty($close_this_property_id))){
+    closeProperties($property_id);
+    $results = getAllProperties();
+    include 'property_manage.php';
+    exit();
+}
 }
 
 
