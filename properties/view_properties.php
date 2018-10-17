@@ -26,6 +26,8 @@
        <th scope="col">Rental Fee:</th>
        <th scope="col">Description:</th>
        <th scope="col">Picture:</th> 
+       <th scope="col">Apply:</th> 
+       
    </tr>
 
 
@@ -50,6 +52,7 @@ foreach($results as $result)
    $description = nl2br(htmlspecialchars($result['description']));
    $picture = $result['picture'];
    
+   
       echo "<tr>
        <td>$property_id</td>
        <td>$street</td>
@@ -65,7 +68,8 @@ foreach($results as $result)
        <td>$credit_requirement</td>
        <td>$rental_fee</td>
        <td>$description</td>
-       <td><img src=$picture style='width:100px; height:80px'> </td>    
+       <td><img src=$picture style='width:100px; height:80px'> </td>
+       <td><a href='index.php?id=$property_id'>Apply</a></td>
       </tr>";
 }
 ?>

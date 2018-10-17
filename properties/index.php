@@ -44,6 +44,10 @@ if (isset($_GET['manage'])){
     exit();    
 }
 
+if (isset($_GET['view_apps'])){
+    include 'rental_application.php';
+    exit();    
+}
 
 
 if (isset($_POST['ADDPROPERTY'])){
