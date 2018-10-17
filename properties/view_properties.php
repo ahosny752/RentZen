@@ -47,7 +47,7 @@ foreach($results as $result)
    $income_requirement = $result['income_requirement']; 
    $credit_requirement = $result['credit_requirement'];
    $rental_fee = $result['rental_fee'];
-   $description = $result['description'];
+   $description = nl2br(htmlspecialchars($result['description']));
    $picture = $result['picture'];
    
       echo "<tr>
