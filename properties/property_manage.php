@@ -25,7 +25,8 @@
        <th scope="col">Credit Requirement:</th>
        <th scope="col">Rental Fee:</th>
        <th scope="col">Description:</th>
-       <th scope="col">Picture:</th> 
+       <th scope="col">Picture:</th>
+       <th scope="col">Edit</th> 
    
    </tr>
 

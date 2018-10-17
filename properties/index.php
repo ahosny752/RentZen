@@ -44,9 +44,8 @@ if (isset($_GET['manage'])){
     exit();    
 }
 
-if (isset($_GET['view_apps'])){
-    header('Location:../rental_apps/rental_applications.php');
-    
+if (isset($_GET['id'])){
+    header('Location:../rental_applications/rental_applications.php');
     exit();    
 }
 
