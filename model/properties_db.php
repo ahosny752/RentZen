@@ -108,9 +108,9 @@ function editProperty($property_id,
     $statement->bindValue(12,$rental_fee);
     $statement->bindValue(13,$description);
     $statement->bindValue(14,$picture);
-    $success = $statement->execute();
+    $results = $statement->execute();
     $statement->closeCursor();
     
-    return $success;    
+    return $results;    
 }
 ?>

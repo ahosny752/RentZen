@@ -118,6 +118,9 @@ if (!isset($_SESSION)){
                 <li class="nav-item">
                 <a class="nav-link" href="<?php echo $base_path;?>/users?signin">Sign In</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#properties">Properties</a>
+                </li>
         </ul>
     </div>  
 </nav>

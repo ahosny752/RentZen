@@ -50,32 +50,49 @@ if (isset($_GET['manage'])){
     $results = getAllProperties();
     include 'property_manage.php';
     exit();    
+    
+
+    
 }
 
+//if (isset($_POST['UPDATEPROPERTY'])){
+//    $results = getAllProperties();
+//    include 'property_manage.php';
+//    exit();    
+//    
+//}
+
 if (isset($_GET['id'])){
-   header('Location:../rental_applications/rental_application.php');
+    $results = editProperty($property_id, $street, $city, 
+            $state_id, $zip, $beds, $baths, $sqft, $type_id, 
+            $propstat_id, $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
+            
+    include 'edit_property.php';
+    exit();  
+}
+
+
+if (isset($_GET['id'])){
+   header('Location:../rental_applications/index.php?property_id='.$_GET['id']);
 
     exit();    
 }
 
 
 if (isset($_POST['UPDATEPROPERTY'])){
-   if ((empty($street)  || empty($city)) || empty($state_id)) {
-       $message = "* One or more required fields are missing.";
-       include 'edit_property.php';
-       exit();
-   } else
-   {
+     
        $success = editProperty($property_id, $street, $city, $state_id, $zip, $beds,
                $baths, $sqft, $type_id, $propstat_id, $income_requirement, 
                $credit_requirement, $rental_fee, $description, $picture);
-   
+   echo $property_id;
+   exit();
        if ($success !== false)
            {
            include 'property_manage.php';
            $results = getAllProperties();
            exit();
            } else {
+           include 'edit_property.php';
            $message = "An unexpected error occurred.";
            }
 
@@ -88,7 +105,7 @@ if (($_SESSION['TYPE'] == 'landlord') && (!empty($close_this_property_id))){
     include 'property_manage.php';
     exit();
 }
-}
+
 
 
 

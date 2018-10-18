@@ -52,6 +52,10 @@ if (isset($_GET['pending'])){
     include 'manage_applications.php';
     exit();
 }
+if (isset($_GET['property_id'])){
+    include 'rental_application.php';
+    exit();
+}
 
 if (isset($_GET['view_apps'])){
  $application = getAllApplications();
