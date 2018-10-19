@@ -62,18 +62,20 @@ if (isset($_GET['manage'])){
 //    
 //}
 
-if (isset($_GET['id'])){
-    $results = editProperty($property_id, $street, $city, 
-            $state_id, $zip, $beds, $baths, $sqft, $type_id, 
-            $propstat_id, $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
-            
-    include 'edit_property.php';
-    exit();  
-}
+//if (isset($_GET['id'])){
+//    $results = editProperty($property_id, $street, $city, 
+//            $state_id, $zip, $beds, $baths, $sqft, $type_id, 
+//            $propstat_id, $income_requirement, $credit_requirement, $rental_fee, $description, $picture);
+//            
+//    include 'edit_property.php';
+//    exit();  
+//}
 
 
 if (isset($_GET['id'])){
    header('Location:../rental_applications/index.php?property_id='.$_GET['id']);
+   
+   
 
     exit();    
 }
