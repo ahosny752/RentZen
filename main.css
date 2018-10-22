@@ -18,8 +18,24 @@ and open the template in the editor.
 }
 
 .bg-primary {
-    background-color: #7d161a;
+    background-color: #790604 !important;
 }
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #790604;
+    border-color: #790604;
+    
+}
+
+
+
+
+.text-primary {
+    color: #790604!important;
+}
+
 
 label{
 display:inline-block;

@@ -5,8 +5,15 @@
 <html lang="en">
 
    <title>View Applications</title>
+   
+   <h2 class="text-center"> Rental Application</h2>
+<!--<div class="container-fluid">-->
+    <div class="row justify-content-md-center">
+        
+        <div class="col col-md-2"></div>
+        <div class="col-md-auto"> <!--variable width content-->
    <form action="index.php" method="POST">
-
+       <div class="form-group">
   <label for="first_name">First Name</label>
  <input type="text" name="first_name" id="first_name" value="">
  <br>
@@ -47,11 +54,13 @@
  <input type="text" name="status" id="status" value="pending">
  <br>
  <br>
+ 
   <div id="buttons">
    <input type="submit" value="Apply" name="ADDAPPLICATION">
    <br>
    </div>     
-
-
+       </div>
+        </div>
+    </div>
    </form>
 </html>
