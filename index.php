@@ -81,8 +81,8 @@ if ($_SESSION['TYPE'] == 'renter'){
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+              <h3 class="mb-3">Live in Luxury</h3>
+              <p class="text-muted mb-0">Our homes are equipped with only the best for our renters.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -94,7 +94,7 @@ if ($_SESSION['TYPE'] == 'renter'){
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
+              <i class="fas fa-4x fa-home text-primary mb-3 sr-icon-3"></i>
               <h3 class="mb-3">Up to Date</h3>
               <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
             </div>

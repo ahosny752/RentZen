@@ -30,6 +30,11 @@ and open the template in the editor.
 }
 
 
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #790604;
+}
 
 
 .text-primary {
@@ -53,3 +58,11 @@ border:none;
 width:500px;
 margin:0px auto;
 }
+
+
+
+.portfolio-box .portfolio-box-caption{
+    background: #790604;
+    
+}
+
