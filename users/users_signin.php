@@ -52,6 +52,11 @@
         'into this app.';
     }
   }
+  
+  
+  FB.logout(function(response) {
+   // Person is now logged out
+});
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -142,16 +147,28 @@
                <button type="submit" name="sign-in-landlord" class="btn btn-primary">Sign in as landlord</button> 
                 <button type="submit" name="sign-in-renter" class="btn btn-primary">Sign in as renter</button> 
                  
+                <br>
+            
+                
         </div>
         </form>
 
     <p class="text-center">Don't have an account? <a href="<?php echo $base_path; ?>/users?signup">Sign Up</a></p>
     <br>
-        
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                
+                <input  id="clickMe" type="button" value="logout" onclick="FB.logout();" />
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<!--        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>-->
+    
+    
+    
+    
+    
+       
+
+
 
 <div id="status">
 </div>
