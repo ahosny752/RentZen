@@ -54,9 +54,7 @@
   }
   
   
-  FB.logout(function(response) {
-   // Person is now logged out
-});
+
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -123,6 +121,11 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script>
+FB.logout(function(response) {
+   // Person is now logged out
+}); </script>
+
 <div class="row">
     <div class="col text-center">
         <img class="img-fluid rounded" src="../images/city.png" alt="city">
@@ -163,7 +166,7 @@
 </fb:login-button>-->
     
     
-    
+
     
     
        
